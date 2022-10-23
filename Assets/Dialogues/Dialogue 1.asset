@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Dialogue 1
   m_EditorClassIdentifier: 
   dialogue: "Fiou, cette journ\xE9e fut tr\xE8s longue. Heureusement qu'elle se termine
-    enfin ! Je vais enfin pouvoir me reposer, apr\xE8s tout ce labeur incessant *se
-    frotte le front*."
-  speakerName: Jean-Claude
+    enfin ! Je vais pouvoir me reposer, apr\xE8s tout ce travail *se frotte le front*."
+  speakerName: "R\xE9mi"
   hasLeftCharacter: 1
   isLeftCharacterSpeaking: 1
   leftCharacterSprite: {fileID: 21300000, guid: 997e7f8afa7995548a3d2f78c478813f, type: 3}

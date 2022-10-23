@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6408f1f5488134e4c8c18266a2abdb03, type: 3}
   m_Name: Dialogue 11
   m_EditorClassIdentifier: 
-  dialogue: TO BE CONTINUED !
-  speakerName: 
+  dialogue: "Bon ok, \xE7a va pas \xEAtre facile de s'en sortir avec toi..."
+  speakerName: Inconnue
   hasLeftCharacter: 1
-  isLeftCharacterSpeaking: 1
+  isLeftCharacterSpeaking: 0
   leftCharacterSprite: {fileID: 21300000, guid: 997e7f8afa7995548a3d2f78c478813f, type: 3}
   hasRightCharacter: 1
   isRightCharacterSpeaking: 1

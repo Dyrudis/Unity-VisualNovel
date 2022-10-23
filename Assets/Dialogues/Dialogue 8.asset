@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6408f1f5488134e4c8c18266a2abdb03, type: 3}
   m_Name: Dialogue 8
   m_EditorClassIdentifier: 
-  dialogue: ...
+  dialogue: "C'est trop difficile \xE0 expliquer, mais avec ton aide, on peut sauver
+    le monde d'une terrible trag\xE9die qui devrait arriver dans... *regarde sa montre*
+    30 secondes !"
   speakerName: Inconnue
   hasLeftCharacter: 1
   isLeftCharacterSpeaking: 0

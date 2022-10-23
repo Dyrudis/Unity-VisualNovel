@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6408f1f5488134e4c8c18266a2abdb03, type: 3}
   m_Name: Dialogue 6
   m_EditorClassIdentifier: 
-  dialogue: "Ah, on se tutoie donc ^^. Tu ne m'as pas dit ton petit nom, quel est-il
-    ? Moi c'est Jean-Claude (tous mes potes m'appelle Jean-Claude le bogosse mais
-    ne t'inqui\xE8te pas, je ne suis pas en couple) !"
-  speakerName: Jean-Claude
+  dialogue: "Euuuuh... Bonjour ? Je me suis perdue dans mon voyage interdimensionnel...
+    Ne voudrais-tu pas m'aider \xE0 repartir l\xE0 d'o\xF9 je viens ?"
+  speakerName: Inconnue
   hasLeftCharacter: 1
-  isLeftCharacterSpeaking: 1
+  isLeftCharacterSpeaking: 0
   leftCharacterSprite: {fileID: 21300000, guid: 997e7f8afa7995548a3d2f78c478813f, type: 3}
   hasRightCharacter: 1
-  isRightCharacterSpeaking: 0
+  isRightCharacterSpeaking: 1
   rightCharacter: {fileID: 21300000, guid: eb27cd31fd5d13e4e8d6b3d7562668b0, type: 3}

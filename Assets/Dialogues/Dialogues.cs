@@ -11,6 +11,7 @@ public class Dialogues : MonoBehaviour
     [SerializeField] private TextMeshProUGUI speakerText;
     [SerializeField] private GameObject leftCharacter;
     [SerializeField] private GameObject rightCharacter;
+    [SerializeField] private Button nextButton;
 
     private bool isTextAnimating = false;
 
@@ -25,28 +26,18 @@ public class Dialogues : MonoBehaviour
         // When the user presses the spacebar, the dialogue will change
         if (Input.GetKeyDown(KeyCode.Space) && dialogues.Length > 0)
         {
-            if (isTextAnimating)
-            {
-                StopAllCoroutines();
-                dialogueText.maxVisibleCharacters = dialogueText.textInfo.characterCount;
-                isTextAnimating = false;
-            }
-            else
-            {
-                nextDialogue();
-            }
+            nextDialogue();
         }
     }
 
     // Displays the text over time
-    private IEnumerator animateText(float duration)
+    private IEnumerator animateText()
     {
         isTextAnimating = true;
         TextMeshProUGUI text = dialogueText;
         text.ForceMeshUpdate();
         int totalVisibleCharacters = text.textInfo.characterCount;
         int counter = 0;
-        float delay = duration / totalVisibleCharacters;
 
         while (true)
         {
@@ -56,19 +47,34 @@ public class Dialogues : MonoBehaviour
                 isTextAnimating = false;
                 yield break;
             }
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(.02f);
             counter++;
         }
     }
 
-    void nextDialogue()
+    public void nextDialogue()
     {
+        // If there are no dialogues left, return
+        if (dialogues.Length == 0)
+        {
+            return;
+        }
+
+        // If the text is animating, instantly display the full text
+        if (isTextAnimating)
+        {
+            StopAllCoroutines();
+            dialogueText.maxVisibleCharacters = dialogueText.textInfo.characterCount;
+            isTextAnimating = false;
+            return;
+        }
+
         DialogueScriptableObject dialogue = dialogues[0];
         dialogues = dialogues[1..];
 
         // Change the text
         dialogueText.text = dialogue.dialogue;
-        StartCoroutine(animateText(3f));
+        StartCoroutine(animateText());
 
         // Change the speaker text
         speakerText.text = dialogue.speakerName;
@@ -110,7 +116,6 @@ public class Dialogues : MonoBehaviour
         {
             rightCharacter.SetActive(false);
         }
-
     }
 
 }

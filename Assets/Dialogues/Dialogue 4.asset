@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6408f1f5488134e4c8c18266a2abdb03, type: 3}
   m_Name: Dialogue 4
   m_EditorClassIdentifier: 
-  dialogue: "OUAH ! Mais qui \xEAtes-vous ? Que fa\xEEtes-vous dans ma chambre ???"
-  speakerName: Jean-Claude
+  dialogue: '*POUF*'
+  speakerName: 
   hasLeftCharacter: 1
   isLeftCharacterSpeaking: 1
   leftCharacterSprite: {fileID: 21300000, guid: 997e7f8afa7995548a3d2f78c478813f, type: 3}
   hasRightCharacter: 1
-  isRightCharacterSpeaking: 0
+  isRightCharacterSpeaking: 1
   rightCharacter: {fileID: 21300000, guid: eb27cd31fd5d13e4e8d6b3d7562668b0, type: 3}
